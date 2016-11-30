@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InPassing.Setup">
+  <TabbedPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness"
+                iOS="20, 40, 20, 20"
+                Android="20, 20, 20, 20"
+                WinPhone="20, 20, 20, 20" />
+  </TabbedPage.Padding>
+  <TabbedPage.Children>
+    <ContentPage Title="Log in">
+      <StackLayout Padding="20" Spacing="20"
+                   VerticalOptions="Center">
+        <Entry x:Name="email"
+               Placeholder="Email"
+               Keyboard="Email"
+               VerticalOptions="Center" />
+        <Entry x:Name="password"
+               Placeholder="Password"
+               IsPassword="true"
+               VerticalOptions="Center" />
+        <Button Text="Log in"
+                TextColor="White"
+                BackgroundColor="#17791E" />
+      </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Sign up">
+      <StackLayout Padding="20" Spacing="20"
+                   VerticalOptions="Center">
+        <Entry x:Name="first_name"
+               Placeholder="First Name"
+               VerticalOptions="Center" />
+        <Entry x:Name="last_name"
+               Placeholder="Last Name"
+               VerticalOptions="Center" />
+        <Entry x:Name="signup_email"
+               Placeholder="Email"
+               Keyboard="Email"
+               VerticalOptions="Center" />
+        <Entry x:Name="signup_password"
+               Placeholder="Password"
+               IsPassword="true"
+               VerticalOptions="Center" />
+        <Button Text="Sign up"
+                TextColor="White"
+                BackgroundColor="#17791E" />
+      </StackLayout>
+    </ContentPage>
+  </TabbedPage.Children>
+</TabbedPage>
