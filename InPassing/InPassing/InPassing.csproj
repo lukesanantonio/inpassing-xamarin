@@ -41,8 +41,8 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Setup.xaml.cs">
-      <DependentUpon>Setup.xaml</DependentUpon>
+    <Compile Include="Signup.xaml.cs">
+      <DependentUpon>Signup.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -75,7 +75,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Setup.xaml">
+    <EmbeddedResource Include="Signup.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

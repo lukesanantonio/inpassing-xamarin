@@ -9,7 +9,7 @@ namespace InPassing
     public App()
     {
       InitializeComponent();
-      MainPage = new Setup();
+      MainPage = new Signup();
     }
 
     protected override void OnStart()

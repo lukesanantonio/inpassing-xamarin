@@ -8,9 +8,9 @@ using Xamarin.Forms;
 
 namespace InPassing
 {
-  public partial class Setup : TabbedPage
+  public partial class Signup : TabbedPage
   {
-    public Setup()
+    public Signup()
     {
       InitializeComponent();
     }
