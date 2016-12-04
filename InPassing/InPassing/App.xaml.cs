@@ -6,9 +6,11 @@ namespace InPassing
 {
   public partial class App : Application
   {
+    public Page appPage { get; set; }
     public App()
     {
       InitializeComponent();
+      appPage = new NavigationPage(new ContentPage());
       MainPage = new Signup();
     }
 

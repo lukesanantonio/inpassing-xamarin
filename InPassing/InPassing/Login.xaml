@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="InPassing.Signup">
+             x:Class="InPassing.Login">
   <ContentPage.Padding>
     <OnPlatform x:TypeArguments="Thickness"
                 iOS="20, 40, 20, 20"
@@ -10,29 +10,17 @@
   </ContentPage.Padding>
   <StackLayout Padding="20" Spacing="20"
                VerticalOptions="Center">
-    <Entry x:Name="first_name"
-           Placeholder="First Name"
-           VerticalOptions="Center" />
-    <Entry x:Name="last_name"
-           Placeholder="Last Name"
-           VerticalOptions="Center" />
-    <Entry x:Name="signup_email"
+    <Entry x:Name="login_email"
            Placeholder="Email"
            Keyboard="Email"
            VerticalOptions="Center" />
-    <Entry x:Name="signup_password"
+    <Entry x:Name="login_password"
            Placeholder="Password"
            IsPassword="true"
            VerticalOptions="Center" />
-    <Button Text="Sign up"
+    <Button Text="Log in"
             TextColor="White"
             BackgroundColor="#17791E"
-            Clicked="OnSignup"/>
-    <Label Text="Already have an account?" FontSize="14" TextColor="Gray" HorizontalOptions="Center" />
-    <Button Text="Log in"
-            TextColor="Black"
-            BorderColor="Black"
-            BorderWidth="2"
-            Clicked="OnLoginPressed"/>
+            Clicked="OnLogin"/>
   </StackLayout>
 </ContentPage>
