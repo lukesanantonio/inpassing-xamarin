@@ -16,7 +16,7 @@ namespace InPassing
     }
     public void OnLogin()
     {
-      Application.Current.MainPage = ((App)Application.Current).appPage;
+      Application.Current.MainPage = ((App)Application.Current).AppPage;
     }
   }
 }
