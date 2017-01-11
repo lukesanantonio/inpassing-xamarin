@@ -88,7 +88,7 @@ namespace InPassing
       {
         // GET /me
         var userData = await BackendUrl
-          .AppendPathSegment("me")
+          .AppendPathSegment("users/me")
           .WithOAuthBearerToken(AuthToken)
           .GetJsonAsync<IDictionary<string, object>>();
 
