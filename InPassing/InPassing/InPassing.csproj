@@ -40,6 +40,7 @@
     </Compile>
     <Compile Include="Backend.cs" />
     <Compile Include="Error.cs" />
+    <Compile Include="IAPITokenStorage.cs" />
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>

@@ -18,7 +18,18 @@ namespace InPassing
     // <summary>
     // The current auth token used for making API requests.
     // </summary>
-    private string AuthToken = null;
+    private string AuthToken
+    {
+      get
+      {
+        // We can make this faster by caching it, etc.
+        return TokenStorage?.getAccessToken();
+      }
+      set
+      {
+        TokenStorage?.setAccessToken(value);
+      }
+    }
 
     // <summary>
     // Information about the current user.
@@ -30,7 +41,12 @@ namespace InPassing
     // </summary>
     public ErrorType? CurError = null;
 
-    public Backend() { }
+    public IAPITokenStorage TokenStorage { get; }
+
+    public Backend(IAPITokenStorage tokenStorage)
+    {
+      TokenStorage = tokenStorage;
+    }
 
     public void ProcessHttpException(FlurlHttpException ex)
     {
