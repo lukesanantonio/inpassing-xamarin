@@ -7,28 +7,28 @@ using InPassing.iOS;
 [assembly: Xamarin.Forms.Dependency(typeof(KeychainTokenStorage))]
 namespace InPassing.iOS
 {
-    class KeychainTokenStorage
+  class KeychainTokenStorage
+  {
+    public string accessToken;
+    public string refreshToken;
+
+    public KeychainTokenStorage() { }
+
+    public void setAccessToken(string token)
     {
-        public string accessToken;
-        public string refreshToken;
-
-        public KeychainTokenStorage() { }
-
-        public void setAccessToken(string token)
-        {
-            accessToken = token;
-        }
-        public void setRefreshToken(string token)
-        {
-            refreshToken = token;
-        }
-        public string getAccessToken()
-        {
-            return accessToken;
-        }
-        public string getRefreshToken()
-        {
-            return refreshToken;
-        }
+      accessToken = token;
     }
+    public void setRefreshToken(string token)
+    {
+      refreshToken = token;
+    }
+    public string getAccessToken()
+    {
+      return accessToken;
+    }
+    public string getRefreshToken()
+    {
+      return refreshToken;
+    }
+  }
 }
