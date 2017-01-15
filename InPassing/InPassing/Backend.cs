@@ -113,7 +113,7 @@ namespace InPassing
       {
         // POST /users
         var signupResponse = await BackendUrl
-        .AppendPathSegment("users")
+        .AppendPathSegment("users/")
         .PostJsonAsync(new
         {
           first_name = first_name,
