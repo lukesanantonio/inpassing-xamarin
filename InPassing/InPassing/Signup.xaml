@@ -10,18 +10,18 @@
   </ContentPage.Padding>
   <StackLayout Padding="20" Spacing="20"
                VerticalOptions="Center">
-    <Label x:Name="error_notify" Text="" FontSize="12" TextColor="Red" HorizontalOptions="Center" />
-    <Entry x:Name="first_name"
+    <Label x:Name="errorNotify" Text="" FontSize="16" TextColor="Red" HorizontalOptions="Center" />
+    <Entry x:Name="firstName"
            Placeholder="First Name"
            VerticalOptions="Center" />
-    <Entry x:Name="last_name"
+    <Entry x:Name="lastName"
            Placeholder="Last Name"
            VerticalOptions="Center" />
-    <Entry x:Name="signup_email"
+    <Entry x:Name="signupEmail"
            Placeholder="Email"
            Keyboard="Email"
            VerticalOptions="Center" />
-    <Entry x:Name="signup_password"
+    <Entry x:Name="signupPassword"
            Placeholder="Password"
            IsPassword="true"
            VerticalOptions="Center" />

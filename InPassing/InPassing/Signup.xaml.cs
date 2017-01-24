@@ -23,19 +23,18 @@ namespace InPassing
 
       // Sign up and get an auth token
       await backend.SignupAsync(
-        first_name.Text, last_name.Text, signup_email.Text, signup_password.Text
+        firstName.Text, lastName.Text, signupEmail.Text, signupPassword.Text
       );
 
       if (backend.CurError != null)
       {
         // Something went wrong
-        error_notify.Text = backend.CurError?.ToFriendlyString();
+        errorNotify.Text = backend.CurError?.ToFriendlyString();
         return;
       }
 
       // Otherwise we are good
-
-      Application.Current.MainPage = ((App) Application.Current).AppPage;
+      Application.Current.MainPage = ((App)Application.Current).AppPage;
     }
     void OnLoginPressed()
     {
