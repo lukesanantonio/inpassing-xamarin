@@ -11,11 +11,12 @@ namespace InPassing
     public App()
     {
       InitializeComponent();
-      AppPage = new NavigationPage(new ContentPage());
 
       // Load the backend, auth token, etc.
       //AppBackend = new Backend(DependencyService.Get<IAPITokenStorage>());
       AppBackend = new TestBackend();
+
+      AppPage = new Home();
 
       // Show the sign up page if necessary.
       if (!AppBackend.Authenticated())
