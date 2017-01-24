@@ -14,7 +14,8 @@ namespace InPassing
       AppPage = new NavigationPage(new ContentPage());
 
       // Load the backend, auth token, etc.
-      AppBackend = new Backend(DependencyService.Get<IAPITokenStorage>());
+      //AppBackend = new Backend(DependencyService.Get<IAPITokenStorage>());
+      AppBackend = new TestBackend();
 
       // Show the sign up page if necessary.
       if (!AppBackend.Authenticated())
