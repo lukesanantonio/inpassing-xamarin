@@ -145,6 +145,14 @@ namespace InPassing
       }
     }
 
+    async public virtual Task<Model.User> GetCurUserOrRefreshAsync()
+    {
+      if (CurUser != null) return CurUser;
+
+      await RefreshMe();
+      return CurUser;
+    }
+
     public virtual bool Authenticated()
     {
       // Are we authenticated?
