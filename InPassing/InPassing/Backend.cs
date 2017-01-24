@@ -64,7 +64,7 @@ namespace InPassing
       }
     }
 
-    async public Task AuthenticateAsync(string email, string password)
+    async public virtual Task AuthenticateAsync(string email, string password)
     {
       // Already authenticated?
       if (Authenticated()) return;
@@ -98,7 +98,7 @@ namespace InPassing
     // <summary>
     // Update CurUser using the /me API endpoint.
     // </summary>
-    async public Task RefreshMe()
+    async public virtual Task RefreshMe()
     {
       try
       {
@@ -123,7 +123,7 @@ namespace InPassing
     // <summary>
     // Signs up the user and authenticates as them.
     // </summary>
-    async public Task SignupAsync(string first_name, string last_name, string email, string password)
+    async public virtual Task SignupAsync(string first_name, string last_name, string email, string password)
     {
       try
       {
@@ -147,7 +147,7 @@ namespace InPassing
       }
     }
 
-    public bool Authenticated()
+    public virtual bool Authenticated()
     {
       // Are we authenticated?
       return AuthToken != null;
