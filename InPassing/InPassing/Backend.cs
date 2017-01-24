@@ -34,7 +34,7 @@ namespace InPassing
     // <summary>
     // Information about the current user.
     // </summary>
-    public User CurUser = null;
+    public Model.User CurUser = null;
 
     // <summary>
     // The most recent error that has occurred.
@@ -103,15 +103,13 @@ namespace InPassing
       try
       {
         // GET /me
-        var userData = await BackendUrl
+        dynamic userData = await BackendUrl
           .AppendPathSegment("users/me")
           .WithOAuthBearerToken(AuthToken)
-          .GetJsonAsync<IDictionary<string, object>>();
+          .GetJsonAsync();
 
         // Convert relevant fields, later on we may want passes, associated orgs, etc.
-        CurUser = new User(
-          Convert.ToInt32(userData["id"]), (string)userData["first_name"], (string)userData["last_name"], (string)userData["email"]
-        );
+        CurUser = Model.User.FromDynamic(userData);
       }
       catch (FlurlHttpException ex)
       {
