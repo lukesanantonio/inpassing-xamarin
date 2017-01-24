@@ -41,7 +41,7 @@ namespace InPassing
     // </summary>
     public ErrorType? CurError = null;
 
-    public IAPITokenStorage TokenStorage { get; }
+    private IAPITokenStorage TokenStorage { get; }
 
     public Backend(IAPITokenStorage tokenStorage)
     {
