@@ -10,11 +10,12 @@
   </ContentPage.Padding>
   <StackLayout Padding="20" Spacing="20"
                VerticalOptions="Center">
-    <Entry x:Name="login_email"
+    <Label x:Name="errorNotify" Text="" FontSize="16" TextColor="Red" HorizontalOptions="Center" />
+    <Entry x:Name="loginEmail"
            Placeholder="Email"
            Keyboard="Email"
            VerticalOptions="Center" />
-    <Entry x:Name="login_password"
+    <Entry x:Name="loginPassword"
            Placeholder="Password"
            IsPassword="true"
            VerticalOptions="Center" />
@@ -22,5 +23,11 @@
             TextColor="White"
             BackgroundColor="#17791E"
             Clicked="OnLogin"/>
+    <Label Text="Need an account?" FontSize="14" TextColor="Gray" HorizontalOptions="Center" />
+    <Button Text="Sign up"
+            TextColor="Black"
+            BorderColor="Black"
+            BorderWidth="2"
+            Clicked="OnSignupPressed"/>
   </StackLayout>
 </ContentPage>

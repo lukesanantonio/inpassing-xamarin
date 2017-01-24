@@ -14,9 +14,25 @@ namespace InPassing
     {
       InitializeComponent();
     }
-    public void OnLogin()
+
+    async void OnLogin()
     {
+      Backend backend = ((App)Application.Current).AppBackend;
+
+      await backend.AuthenticateAsync(loginEmail.Text, loginPassword.Text);
+
+      if (backend.CurError != null)
+      {
+        errorNotify.Text = backend.CurError?.ToFriendlyString();
+        return;
+      }
+
+      // Otherwise we are good to go!
       Application.Current.MainPage = ((App)Application.Current).AppPage;
+    }
+    public void OnSignupPressed()
+    {
+      Application.Current.MainPage = new Signup();
     }
   }
 }
