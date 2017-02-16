@@ -61,5 +61,22 @@ namespace InPassing
     {
       return CurUser != null;
     }
+
+    public override Model.DaystateShallow GetDaystate(int orgId, int stateId)
+    {
+      if(stateId == 1)
+      {
+        return new Model.DaystateShallow(orgId, "A", "Today is an A day");
+      }
+      else if(stateId == 2)
+      {
+        return new Model.DaystateShallow(orgId, "B", "Today is a B day");
+      }
+      throw new NotImplementedException();
+    }
+    public override Model.DaystateShallow GetCurrentDaystate(int orgId)
+    {
+       return new Model.DaystateShallow(orgId, "B", "Today is a B day");
+    }
   }
 }

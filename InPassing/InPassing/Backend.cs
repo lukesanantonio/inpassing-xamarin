@@ -163,5 +163,14 @@ namespace InPassing
       // Are we authenticated?
       return AuthToken != null;
     }
+
+    public virtual Model.DaystateShallow GetDaystate(int orgId, int stateId)
+    {
+      throw new NotImplementedException();
+    }
+    public virtual Model.DaystateShallow GetCurrentDaystate(int orgId)
+    {
+      throw new NotImplementedException();
+    }
   }
 }
