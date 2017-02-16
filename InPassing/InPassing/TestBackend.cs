@@ -48,6 +48,15 @@ namespace InPassing
       return CurUser;
     }
 
+    public override List<Model.PassShallow> GetPasses()
+    {
+      return new List<Model.PassShallow>
+      {
+          new Model.PassShallow(1, 1, 1, 1, 20),
+          new Model.PassShallow(1, 1, 1, 2, 40),
+      };
+    }
+
     public override bool Authenticated()
     {
       return CurUser != null;

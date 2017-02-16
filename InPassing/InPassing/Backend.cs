@@ -145,6 +145,11 @@ namespace InPassing
       }
     }
 
+    public virtual List<Model.PassShallow> GetPasses()
+    {
+            return new List<Model.PassShallow>();
+    }
+
     async public virtual Task<Model.User> GetCurUserOrRefreshAsync()
     {
       if (CurUser != null) return CurUser;

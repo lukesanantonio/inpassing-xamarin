@@ -48,6 +48,7 @@
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\Org.cs" />
+    <Compile Include="Model\Pass.cs" />
     <Compile Include="OrgHome.xaml.cs">
       <DependentUpon>OrgHome.xaml</DependentUpon>
     </Compile>
