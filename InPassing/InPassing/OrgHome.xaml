@@ -1,6 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="InPassing.OrgHome">
-    <Label Text="{Binding Name}" VerticalOptions="Center" HorizontalOptions="Center" />
+             x:Class="InPassing.OrgHome"
+             >
+    <StackLayout Orientation="Vertical" Padding="20" Spacing="20">
+        <Label Text="{Binding OrgName}" FontSize="38" HorizontalTextAlignment="Center" />
+        <Label Text="{Binding OrgGreeting}" FontSize="30" HorizontalTextAlignment="Center" />
+        <ListView x:Name="passesView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Day}" FontSize="22" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand"/>
+                            <Label Text="{Binding Spot, StringFormat='Spot {0}'}" FontSize="22" VerticalTextAlignment="Center" HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
 </ContentPage>
